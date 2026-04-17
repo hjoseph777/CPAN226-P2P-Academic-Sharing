@@ -1,0 +1,38 @@
+CPAN226 — Study Notes: TCP vs UDP
+===================================
+
+TCP (Transmission Control Protocol)
+─────────────────────────────────────
+✔ Connection-oriented (3-way handshake)
+✔ Guaranteed delivery — retransmits lost packets
+✔ Ordered delivery — packets arrive in sequence
+✔ Flow control & congestion control
+✘ Higher overhead (headers + ACKs)
+✘ Slower than UDP
+
+Use TCP when: accuracy matters more than speed
+Examples: file transfer, web, email
+
+UDP (User Datagram Protocol)
+──────────────────────────────
+✔ Connectionless — no handshake
+✔ Low latency — fire and forget
+✔ Supports broadcast and multicast
+✘ No guaranteed delivery
+✘ No ordering guarantees
+✘ No built-in congestion control
+
+Use UDP when: speed matters more than accuracy
+Examples: DNS, streaming, VoIP, peer discovery
+
+In This Project:
+  → TCP  used for: file transfer (GET command)
+  → UDP  used for: peer discovery (PEER_ANNOUNCE broadcast on port 9000)
+
+SHA-256 Integrity Check:
+  - After a TCP file transfer, the receiver computes SHA-256 of the received file
+  - This is compared against the SHA-256 the sender computed BEFORE sending
+  - If they match → file is intact ✅
+  - If they differ → file was corrupted → retry ❌
+
+Notes prepared for CPAN226 | Winter/Summer 2026

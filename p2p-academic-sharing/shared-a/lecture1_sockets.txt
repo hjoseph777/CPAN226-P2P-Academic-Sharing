@@ -1,0 +1,30 @@
+CPAN226 — Lecture 1: Introduction to Socket Programming
+========================================================
+
+Topic: What is a Socket?
+─────────────────────────
+A socket is one endpoint of a two-way communication link between two programs
+running on the network. A socket is bound to a port number so that the TCP
+layer can identify the application that data is destined for.
+
+Key Socket Types:
+  - Stream Sockets (TCP)  → reliable, ordered, connection-oriented
+  - Datagram Sockets (UDP) → unreliable, fast, connectionless
+
+Java Socket API:
+  - ServerSocket  → server side, listens on a port
+  - Socket        → client side, connects to a server
+  - DatagramSocket → for UDP (both client and server)
+
+The 3-Way TCP Handshake:
+  1. SYN      — client sends synchronization request
+  2. SYN-ACK  — server acknowledges
+  3. ACK      — client confirms, connection established
+
+Why P2P?
+  - Each node is both a client and a server
+  - No single point of failure
+  - Scales naturally as more peers join
+  - Perfect for resource sharing without a central bottleneck
+
+Notes prepared for CPAN226 | Winter/Summer 2026

@@ -1,0 +1,25 @@
+# ─── Internal / course-planning docs (do NOT push to GitHub) ───────────────
+p2p-academic-sharing/guidelines.txt
+p2p-academic-sharing/guidelines_clean.md
+p2p-academic-sharing/guidelines_layout.txt
+p2p-academic-sharing/memory.md
+p2p-academic-sharing/PRD.md
+p2p-academic-sharing/videoExplanation.md
+p2p-academic-sharing/Network Programming Project Guidelines.pdf
+
+# ─── Compiled output ────────────────────────────────────────────────────────
+p2p-academic-sharing/out/
+
+# ─── Other labs / unrelated course files ────────────────────────────────────
+other/
+
+# ─── Stale duplicates ───────────────────────────────────────────────────────
+README - Copy.md
+
+# ─── OS / IDE artifacts ─────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+.vscode/
+*.class
