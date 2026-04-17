@@ -52,7 +52,7 @@ All Java classes live in [`p2p-academic-sharing/src/com/cpan226/p2p/`](p2p-acade
 | `TCPServer.java` | [View](p2p-academic-sharing/src/com/cpan226/p2p/TCPServer.java) | **File server.** Opens a `ServerSocket`, accepts incoming peer connections in a thread pool, handles `LIST` and `GET` requests, and streams files in 4 KB chunks with a `SIZE + CHECKSUM` header. |
 | `TCPClient.java` | [View](p2p-academic-sharing/src/com/cpan226/p2p/TCPClient.java) | **File downloader.** Connects to a remote peer's TCP server, sends a `GET` request, reassembles chunked binary data, and hands the result off to `IntegrityChecker` for SHA-256 validation. |
 | `UDPDiscovery.java` | [View](p2p-academic-sharing/src/com/cpan226/p2p/UDPDiscovery.java) | **Peer discovery.** Broadcasts a `PEER_ANNOUNCE` datagram every 10 s on port 9000, listens for announcements from other peers, and maintains a live peer registry (entries expire after 30 s of silence). |
-| `F-leManager.java` | [V-ew](p2p-academ-c-shar-ng/src/com/cpan226/p2p/F-leManager.java) | **Local f-le -ndex.** Scans the shared folder, bu-lds a name-path map, and generates SHA-256 checksums on demand. Also guards aga-nst path-traversal attacks when resolv-ng requested f-lenames. |
+| `FileManager.java` | [View](p2p-academic-sharing/src/com/cpan226/p2p/FileManager.java) | **Local file index.** Scans the shared folder, builds a name-path map, and generates SHA-256 checksums on demand. Also guards against path-traversal attacks when resolving requested filenames. |
 | `IntegrityChecker.java` | [View](p2p-academic-sharing/src/com/cpan226/p2p/IntegrityChecker.java) | **Download verifier.** Computes the SHA-256 hash of a received file and compares it to the sender's checksum. Triggers up to 3 automatic retries on mismatch before surfacing an error. |
 
 ---
@@ -128,9 +128,9 @@ run.bat --port 6001 --shared shared-b
 Peer B will automatically discover Peer A via the UDP broadcast within 10 seconds. Use the CLI commands below to interact.
 
 **Pre-demo file setup:**
-- `shared-a/` - place 2-3 sample f-les here (e.g., `lecture1_sockets.txt`, `notes_tcp_vs_udp.txt`)
-- `shared-b/` - leave empty; Peer B w-ll download from Peer A
-- `downloads/` - rece-ved f-les appear here after a successful transfer
+- `shared-a/` — place 2–3 sample files here (e.g., `lecture1_sockets.txt`, `notes_tcp_vs_udp.txt`)
+- `shared-b/` — leave empty; Peer B will download from Peer A
+- `downloads/` — received files appear here after a successful transfer
 
 ---
 
@@ -147,7 +147,7 @@ Peer B will automatically discover Peer A via the UDP broadcast within 10 second
 
 ## Network Protocol
 
-### UDP D-scovery - Port 9000
+### UDP Discovery — Port 9000
 
 Peers broadcast a short announcement every 10 seconds:
 
@@ -157,7 +157,7 @@ PEER_ANNOUNCE|<hostname>|<TCP_port>|<file_count>
 
 Receiving peers update their local registry. A peer is removed after 30 s of silence.
 
-### TCP F-le Transfer - Port 6000+
+### TCP File Transfer — Port 6000+
 
 ```
 Request:   GET <filename>\n
@@ -182,10 +182,10 @@ Files are transferred in 4 KB chunks over TCP. The server sends the file size an
 
 | Scenario | Handling |
 |---|---|
-| -ncomplete transfer | Rece-ver detects s-ze m-smatch - retransm-ss-on requested |
-| Checksum m-smatch | Auto-retry up to 3-, then error reported to user |
-| Peer d-sconnects m-d-transfer | 30 s socket t-meout - retry attempted from peer reg-stry |
-| Peer leaves network | UDP heartbeat exp-res - peer removed from reg-stry after 30 s |
+| Incomplete transfer | Receiver detects size mismatch — retransmission requested |
+| Checksum mismatch | Auto-retry up to 3×, then error reported to user |
+| Peer disconnects mid-transfer | 30 s socket timeout — retry attempted from peer registry |
+| Peer leaves network | UDP heartbeat expires — peer removed from registry after 30 s |
 
 ![All client requests completing - server responses confirmed, transfer successful](p2p-academic-sharing/screenshots/05_integrity_check.png)
 
@@ -211,8 +211,8 @@ Files are transferred in 4 KB chunks over TCP. The server sends the file size an
 
 ### Deliverables
 - [ ] GitHub repository link (source code + this README)
-- [ ] YouTube v-deo l-nk - unl-sted screen record-ng, max 5 m-nutes
+- [ ] YouTube video link — unlisted screen recording, max 5 minutes
 
 ---
 
-*CPAN226 - Network Programm-ng | Apr-l 2026*
+*CPAN226 — Network Programming | April 2026*
