@@ -224,15 +224,19 @@ Files are transferred in 4 KB chunks over TCP. The server sends the file size an
 
 ### 📹 P2P Academic Resource Sharing — Live Demo
 
-*Click the image below to watch: peer discovery · file listing · SHA-256 verified transfer*
-
 <a href="https://go.screenpal.com/player/cOfYVinO3Up" target="_blank">
-  <img src="p2p-academic-sharing/screenshots/diagram_01_architecture.svg" alt="Click to watch demo video" width="700" />
+  <img src="p2p-academic-sharing/screenshots/diagram_01_architecture.svg" alt="System Architecture" width="700" />
 </a>
 
-<br/><br/>
+<br/>
 
-[![▶ Watch Full Demo on ScreenPal](https://img.shields.io/badge/▶%20Watch%20Full%20Demo-Click%20Here-4A90D9?style=for-the-badge&logoColor=white)](https://go.screenpal.com/player/cOfYVinO3Up)
+**▶ Play inline below — or [watch on ScreenPal](https://go.screenpal.com/player/cOfYVinO3Up) for full screen**
+
+<br/>
+
+<video width="700" controls>
+  <source src="p2p-academic-sharing/screenshots/Recording__16.mp4" type="video/mp4">
+</video>
 
 </div>
 ---
