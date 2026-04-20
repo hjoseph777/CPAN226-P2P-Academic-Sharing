@@ -235,7 +235,7 @@ Files are transferred in 4 KB chunks over TCP. The server sends the file size an
 ### 🎬 Video 2 — P2P Network Live Demo in Action
 
 <a href="https://youtu.be/p584-jRJMIc?vq=hd720" target="_blank">
-  <img src="https://img.youtube.com/vi/p584-jRJMIc/hqdefault.jpg" alt="▶ Click to watch P2P live demo on YouTube" width="700" />
+  <img src="p2p-academic-sharing/screenshots/P2P.png" alt="▶ Click to watch P2P live demo on YouTube" width="700" />
 </a>
 
 <br/>
