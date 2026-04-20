@@ -46,14 +46,14 @@ Each node runs as both a server and a client (hybrid P2P). Two protocols work in
 
 All Java classes live in [`p2p-academic-sharing/src/com/cpan226/p2p/`](p2p-academic-sharing/src/com/cpan226/p2p/).
 
-| Class | Link | Description |
-|---|---|---|
-| `PeerNode` | Main entry point - starts the TCP server and UDP listener |
-| `TCPServer.java` | [View](p2p-academic-sharing/src/com/cpan226/p2p/TCPServer.java) | **File server.** Opens a `ServerSocket`, accepts incoming peer connections in a thread pool, handles `LIST` and `GET` requests, and streams files in 4 KB chunks with a `SIZE + CHECKSUM` header. |
-| `TCPClient.java` | [View](p2p-academic-sharing/src/com/cpan226/p2p/TCPClient.java) | **File downloader.** Connects to a remote peer's TCP server, sends a `GET` request, reassembles chunked binary data, and hands the result off to `IntegrityChecker` for SHA-256 validation. |
-| `UDPDiscovery.java` | [View](p2p-academic-sharing/src/com/cpan226/p2p/UDPDiscovery.java) | **Peer discovery.** Broadcasts a `PEER_ANNOUNCE` datagram every 10 s on port 9000, listens for announcements from other peers, and maintains a live peer registry (entries expire after 30 s of silence). |
-| `FileManager.java` | [View](p2p-academic-sharing/src/com/cpan226/p2p/FileManager.java) | **Local file index.** Scans the shared folder, builds a name-path map, and generates SHA-256 checksums on demand. Also guards against path-traversal attacks when resolving requested filenames. |
-| `IntegrityChecker.java` | [View](p2p-academic-sharing/src/com/cpan226/p2p/IntegrityChecker.java) | **Download verifier.** Computes the SHA-256 hash of a received file and compares it to the sender's checksum. Triggers up to 3 automatic retries on mismatch before surfacing an error. |
+| Class | Description |
+|---|---|
+| [PeerNode.java](p2p-academic-sharing/src/com/cpan226/p2p/PeerNode.java) | **Main entry point.** Wires all components together, starts the TCP server and UDP discovery daemon threads, and runs the interactive CLI. |
+| [TCPServer.java](p2p-academic-sharing/src/com/cpan226/p2p/TCPServer.java) | **File server.** Opens a `ServerSocket`, accepts incoming peer connections in a cached thread pool, handles `LIST` and `GET` requests, and streams files in 4 KB chunks with a `SIZE + CHECKSUM` header. |
+| [TCPClient.java](p2p-academic-sharing/src/com/cpan226/p2p/TCPClient.java) | **File downloader.** Connects to a remote peer's TCP server, sends a `GET` request, reassembles chunked binary data, and hands the result off to `IntegrityChecker` for SHA-256 validation. |
+| [UDPDiscovery.java](p2p-academic-sharing/src/com/cpan226/p2p/UDPDiscovery.java) | **Peer discovery.** Broadcasts a `PEER_ANNOUNCE` datagram every 10 s on port 9000, listens for announcements from other peers, and maintains a live peer registry (entries expire after 30 s of silence). |
+| [FileManager.java](p2p-academic-sharing/src/com/cpan226/p2p/FileManager.java) | **Local file index.** Scans the shared folder, generates SHA-256 checksums on demand, and guards against path-traversal attacks when resolving requested filenames. |
+| [IntegrityChecker.java](p2p-academic-sharing/src/com/cpan226/p2p/IntegrityChecker.java) | **Download verifier.** Computes the SHA-256 hash of a received file and compares it to the sender's checksum. Triggers up to 3 automatic retries on mismatch before surfacing an error. |
 
 ---
 
@@ -202,16 +202,33 @@ Files are transferred in 4 KB chunks over TCP. The server sends the file size an
 ## Submission Checklist
 
 ### Code
-- [ ] `PeerNode.java`
-- [ ] `TCPServer.java`
-- [ ] `TCPClient.java`
-- [ ] `UDPDiscovery.java`
-- [ ] `FileManager.java`
-- [ ] `IntegrityChecker.java`
+- [x] `PeerNode.java`
+- [x] `TCPServer.java`
+- [x] `TCPClient.java`
+- [x] `UDPDiscovery.java`
+- [x] `FileManager.java`
+- [x] `IntegrityChecker.java`
 
 ### Deliverables
-- [ ] GitHub repository link (source code + this README)
-- [ ] YouTube video link — unlisted screen recording, max 5 minutes
+- [x] **Project Report** — [`project_report.md`](p2p-academic-sharing/project_report.md) *(export to PDF before final submission)*
+- [x] **GitHub Repository** — source code + this README
+- [ ] **YouTube Demo Video** — [https://youtu.be/PLACEHOLDER](https://youtu.be/PLACEHOLDER) *(replace with actual link before submission — unlisted, max 5 min)*
+
+---
+
+---
+
+## Demo Video
+
+> 📹 Click the image below to watch the full live demonstration (peer discovery, file listing, and SHA-256 verified transfer).
+
+<a href="https://go.screenpal.com/player/cOfYVinO3Up" target="_blank">
+  <img src="p2p-academic-sharing/screenshots/diagram_01_architecture.svg" alt="▶ Watch P2P Demo Video" width="800" />
+</a>
+
+<br/>
+
+[![▶ Watch Full Demo on ScreenPal](https://img.shields.io/badge/▶%20Watch%20Full%20Demo-ScreenPal-4A90D9?style=for-the-badge&logo=screenpal)](https://go.screenpal.com/player/cOfYVinO3Up)
 
 ---
 
