@@ -222,13 +222,13 @@ Files are transferred in 4 KB chunks over TCP. The server sends the file size an
 
 ### 📹 P2P Academic Resource Sharing — Live Demo
 
-<a href="https://raw.githubusercontent.com/hjoseph777/CPAN226-P2P-Academic-Sharing/main/p2p-academic-sharing/screenshots/Recording__16.mp4">
-  <img src="p2p-academic-sharing/screenshots/diagram_01_architecture.svg" alt="▶ Click to play demo video" width="700" />
+<a href="https://go.screenpal.com/player/cOfYVinO3Up" target="_blank">
+  <img src="p2p-academic-sharing/screenshots/diagram_01_architecture.svg" alt="▶ Click to watch demo video" width="700" />
 </a>
 
-<video width="700" controls>
-  <source src="https://raw.githubusercontent.com/hjoseph777/CPAN226-P2P-Academic-Sharing/main/p2p-academic-sharing/screenshots/Recording__16.mp4" type="video/mp4">
-</video>
+<br/>
+
+> 📌 *Click the diagram above to watch the full demo on ScreenPal — peer discovery, file listing & SHA-256 verified transfer.*
 
 </div>
 
