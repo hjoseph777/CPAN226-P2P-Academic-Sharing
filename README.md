@@ -222,13 +222,13 @@ Files are transferred in 4 KB chunks over TCP. The server sends the file size an
 
 ### 📹 Video 1 — System Architecture Overview
 
-<a href="https://go.screenpal.com/player/cOfYVinO3Up" target="_blank">
-  <img src="p2p-academic-sharing/screenshots/diagram_01_architecture.svg" alt="▶ Click to watch architecture overview" width="700" />
+<a href="https://youtu.be/uHkTbzZtw4o" target="_blank">
+  <img src="https://img.youtube.com/vi/uHkTbzZtw4o/maxresdefault.jpg" alt="▶ Click to watch architecture overview on YouTube" width="700" />
 </a>
 
 <br/>
 
-> 📌 *Click the diagram above — peer discovery, file listing & SHA-256 verified transfer.*
+> 🔒 *Unlisted YouTube video — click the thumbnail above to watch.*
 
 <br/><br/>
 
