@@ -212,9 +212,7 @@ Files are transferred in 4 KB chunks over TCP. The server sends the file size an
 ### Deliverables
 - [x] **Project Report** — [`project_report.md`](p2p-academic-sharing/project_report.md) *(export to PDF before final submission)*
 - [x] **GitHub Repository** — source code + this README
-- [ ] **YouTube Demo Video** — [https://youtu.be/PLACEHOLDER](https://youtu.be/PLACEHOLDER) *(replace with actual link before submission — unlisted, max 5 min)*
-
----
+- [x] **Demo Video** — recorded and embedded below
 
 ---
 
@@ -228,17 +226,14 @@ Files are transferred in 4 KB chunks over TCP. The server sends the file size an
   <img src="p2p-academic-sharing/screenshots/diagram_01_architecture.svg" alt="System Architecture" width="700" />
 </a>
 
-<br/>
-
-**▶ Play inline below — or [watch on ScreenPal](https://go.screenpal.com/player/cOfYVinO3Up) for full screen**
-
-<br/>
-
 <video width="700" controls>
   <source src="p2p-academic-sharing/screenshots/Recording__16.mp4" type="video/mp4">
 </video>
 
+<!-- ▶ Play inline below — or watch on ScreenPal for full screen -->
+
 </div>
+
 ---
 
 *CPAN226 — Network Programming | April 2026*
