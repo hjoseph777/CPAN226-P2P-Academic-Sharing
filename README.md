@@ -223,12 +223,12 @@ Files are transferred in 4 KB chunks over TCP. The server sends the file size an
 ### 📹 Video 1 — System Architecture Overview
 
 <a href="https://youtu.be/uHkTbzZtw4o" target="_blank">
-  <img src="https://img.youtube.com/vi/uHkTbzZtw4o/maxresdefault.jpg" alt="▶ Click to watch architecture overview on YouTube" width="700" />
+  <img src="p2p-academic-sharing/screenshots/diagram_01_architecture.svg" alt="▶ Click to watch architecture overview on YouTube" width="700" />
 </a>
 
 <br/>
 
-> 🔒 *Unlisted YouTube video — click the thumbnail above to watch.*
+> 🔒 *Unlisted YouTube video — click the diagram above to watch.*
 
 <br/><br/>
 
@@ -240,7 +240,7 @@ Files are transferred in 4 KB chunks over TCP. The server sends the file size an
 
 <br/>
 
-> 🔒 *Unlisted YouTube video — click the thumbnail above to watch the full P2P demo in action.*
+> 🔒 *Unlisted YouTube video — click the thumbnail above to watch the full P2P live demo in action.*
 
 </div>
 
