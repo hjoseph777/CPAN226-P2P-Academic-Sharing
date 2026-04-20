@@ -240,7 +240,7 @@ Files are transferred in 4 KB chunks over TCP. The server sends the file size an
 
 <br/>
 
-> 🔒 *Unlisted YouTube video — click the thumbnail above to watch the full P2P live demo in action.*
+> 🔒 *Unlisted YouTube video — click the thumbnail above to watch. For best quality, select **720p** via the ⚙️ gear icon.*
 
 </div>
 
