@@ -222,9 +222,7 @@ Files are transferred in 4 KB chunks over TCP. The server sends the file size an
 
 ### 📹 P2P Academic Resource Sharing — Live Demo
 
-<a href="https://go.screenpal.com/player/cOfYVinO3Up" target="_blank">
-  <img src="p2p-academic-sharing/screenshots/diagram_01_architecture.svg" alt="System Architecture" width="700" />
-</a>
+<img src="p2p-academic-sharing/screenshots/diagram_01_architecture.svg" alt="System Architecture" width="700" />
 
 <video width="700" controls>
   <source src="p2p-academic-sharing/screenshots/Recording__16.mp4" type="video/mp4">
