@@ -210,7 +210,7 @@ Files are transferred in 4 KB chunks over TCP. The server sends the file size an
 - [x] `IntegrityChecker.java`
 
 ### Deliverables
-- [x] **Project Report** — [`project_report.md`](p2p-academic-sharing/project_report.md) *(export to PDF before final submission)*
+- [x] **Project Report (PDF)** — 📄 [View Online](https://github.com/hjoseph777/CPAN226-P2P-Academic-Sharing/blob/main/p2p-academic-sharing/P2P_Report_StackDoc.pdf) &nbsp;|&nbsp; ⬇️ [Download PDF](https://raw.githubusercontent.com/hjoseph777/CPAN226-P2P-Academic-Sharing/main/p2p-academic-sharing/P2P_Report_StackDoc.pdf)
 - [x] **GitHub Repository** — source code + this README
 - [x] **Demo Video** — recorded and embedded below
 
