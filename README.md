@@ -244,6 +244,18 @@ Files are transferred in 4 KB chunks over TCP. The server sends the file size an
 
 </div>
 
+<br/><br/>
+
+### 👨‍💻 Video 3 — Code Details Explanation
+
+<a href="https://www.youtube.com/watch?v=V9E8GqE_5gI" target="_blank">
+  <img src="p2p-academic-sharing/screenshots/CodeDetails.png" alt="▶ Click to watch Code Details Explanation on YouTube" width="700" />
+</a>
+
+<br/>
+
+> 🔒 *Unlisted YouTube video — click the thumbnail above to watch.*
+
 ---
 
 *CPAN226 — Network Programming | April 2026*
